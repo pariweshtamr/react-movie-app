@@ -9,19 +9,17 @@ import './App.scss'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <div className="container">
-          <Routes>
-            <Route path="/" exact element={<Home />}></Route>
-            <Route path="/movie/:imdbID" element={<MovieDetail />}></Route>
-            <Route element={<PageNotFound />}></Route>
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route path="/" exact element={<Home />}></Route>
+          <Route path="/movie/:imdbID" element={<MovieDetail />}></Route>
+          <Route element={<PageNotFound />}></Route>
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   )
 }
 
